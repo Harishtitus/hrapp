@@ -1,0 +1,37 @@
+table {
+    width: 100%;
+    background-color:rgb(226, 226, 226) ;
+  }
+
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .filter{
+    background-color:rgb(226, 226, 226);
+    bottom: 10px;
+    padding-left: px;
+  }
+
+  .head{
+    color: floralwhite;
+    padding-left: 650px;
+    font-size: 25px;
+  }
+
+  .create{
+    left: 1500px;
+    width: 200px;
+    bottom: 70px;
+}
+
+.back{
+  left: 1500px;
+  width: 200px;
+  top: 50px;
+}
+
+.page{
+  background-color:rgb(226, 226, 226)
+}

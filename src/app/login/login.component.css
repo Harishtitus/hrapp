@@ -1,0 +1,63 @@
+mat-card{
+    width: 100%;
+}
+
+.mainscreen{
+    text-align: center;
+    width: 100%;
+}
+
+
+/* .mat-card{
+    background-color: rgb(226, 226, 226);
+    border-radius: 30px;
+    height: 500px;
+    width: 600px;
+    padding-left: 150px;
+    left: 500px;
+    top: 100px;
+}
+
+.header{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.fullwidth{
+    top: 100px;
+    left: 80px;
+    width: 300px;
+ ;
+}
+
+.full-width{
+    top: 100px;
+    left: 80px;
+    width: 300px;
+}
+
+.button-row{
+    top: 150px;
+    left: 80px;
+    width: 300px;
+
+}
+
+.button{
+    top: 160px;
+  right: 235px;
+    color: black;
+}
+
+.button-row:hover{
+    
+    color: green;
+}
+
+.text-link{
+    top: 100px;
+    left: 80px;
+    width: 300px;
+} */

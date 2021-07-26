@@ -1,0 +1,274 @@
+
+<mat-card class="card">
+
+    <mat-card-header>
+        <mat-card-title class="header">EMPLOYEE DATAS</mat-card-title>
+      </mat-card-header>
+
+<form class="datasform" [formGroup] = "datasform" (ngSubmit)="onSubmit(datasform.value)">
+
+    <mat-form-field  appearance="outline"  class="id" [floatLabel]="floatLabelControl.value">
+        <mat-label>Employee ID</mat-label>
+        <input color="white" matInput type="text" name="employeeId" formControlName="employeeId" placeholder="please Enter Employee ID"required/>
+        <mat-error *ngIf="!datasform.controls['employeeId'].valid">Employee ID Is Required</mat-error> 
+      </mat-form-field>
+        
+        <mat-form-field appearance="outline"  class="name" [floatLabel]="floatLabelControl.value">
+            <mat-label>Employee Name</mat-label>
+            <input matInput type="text" name="employeeName"  formControlName="employeeName" placeholder="please Enter Employee Name"required/>
+            <mat-error *ngIf="!datasform.controls['employeeName'].valid">Employee Name Is Required</mat-error> 
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="company" [floatLabel]="floatLabelControl.value">
+            <mat-label>Employee Company</mat-label>
+            <mat-select name="employeeCompany" formControlName="employeeCompany">
+              <mat-option *ngFor="let Company of Company" [value]="Company.value">
+              {{Company.viewValue}}
+              </mat-option>
+              </mat-select>
+            <mat-error *ngIf="!datasform.controls['employeeCompany'].valid">Employee Company Is Required</mat-error> 
+          </mat-form-field>
+         
+          <mat-form-field appearance="outline" class="department" [floatLabel]="floatLabelControl.value">
+            <mat-label>Employee Department</mat-label>
+            <mat-select name="employeeDepartment" formControlName="employeeDepartment">
+             <mat-option *ngFor="let Department of Department" [value]="Department.value">
+             {{Department.viewValue}}
+             </mat-option>
+             </mat-select>
+           <mat-error *ngIf="!datasform.controls['employeeDepartment'].valid">Employee Department Is Required</mat-error> 
+         </mat-form-field>
+
+
+                
+          <p>
+             <mat-form-field appearance="outline" class="designation" [floatLabel]="floatLabelControl.value">
+             <mat-label>Employee Designation</mat-label>
+             <input matInput type="text" name="employeeDesignation"   formControlName="employeeDesignation" placeholder="please Enter Employee Designation"required/>
+             <mat-error *ngIf="!datasform.controls['employeeDesignation'].valid">Employee Designation Is Required</mat-error> 
+            </mat-form-field>
+      
+         
+        
+            <mat-form-field appearance="outline" class="mail" [floatLabel]="floatLabelControl.value">
+            <mat-label>Employee Email</mat-label>
+            <input matInput type="text" name="employeeEmail"   formControlName="employeeEmail" placeholder="please Enter Employee Email"required/>
+            <mat-error *ngIf="!datasform.controls['employeeEmail'].valid">Employee Email Is Required</mat-error> 
+           </mat-form-field>
+
+            <mat-form-field appearance="outline" class="mobile" [floatLabel]="floatLabelControl.value">
+            <mat-label>Employee Mobile NO</mat-label>
+            <input matInput type="text" name="employeeMobileNo" formControlName="employeeMobileNo" placeholder="please Enter Employee Mobile NO"required/>
+            <mat-error *ngIf="!datasform.controls['employeeMobileNo'].valid">Employee Mobile No Is Required</mat-error> 
+           </mat-form-field>
+    
+
+            <mat-form-field appearance="outline" class="date" [floatLabel]="floatLabelControl.value">
+            <mat-label>Employee Joining Date</mat-label>
+            <input matInput type="date" name="employeeJoiningDate"   formControlName="employeeJoiningDate" placeholder="please Enter Employee Joining Date"required/>
+            <mat-error *ngIf="!datasform.controls['employeeJoiningDate'].valid">Employee Joining Date Is Required</mat-error> 
+           </mat-form-field>
+          </p>
+    
+        <p>
+            <mat-form-field appearance="outline" class="to" [floatLabel]="floatLabelControl.value">
+            <mat-label>Employee Reporting To</mat-label>
+            <input matInput type="text" name="employeeReportingTo"  formControlName="employeeReportingTo" placeholder="please Enter Employee Reporting to"required/>
+            <mat-error *ngIf="!datasform.controls['employeeReportingTo'].valid">Employee Reporting To Is Required</mat-error> 
+           </mat-form-field>
+        
+          <mat-form-field appearance="outline" class="DOB" [floatLabel]="floatLabelControl.value">
+          <mat-label>Employee DOB</mat-label>
+          <input matInput type="date" name="employeeDOB"  formControlName="employeeDOB" placeholder="please Enter Employee DOB"required/>
+          <mat-error *ngIf="!datasform.controls['employeeDOB'].valid">Employee DOB Is Required</mat-error> 
+         </mat-form-field>
+
+            <mat-form-field appearance="outline" class="work" [floatLabel]="floatLabelControl.value">
+              <mat-label>Select Work Type</mat-label>
+              <mat-select name="employeeWorkType" formControlName="employeeWorkType">
+              <mat-option *ngFor="let WorkType of WorkType" [value]="WorkType.value">
+              {{WorkType.viewValue}}
+              </mat-option>
+              </mat-select>
+              <mat-error *ngIf="!datasform.controls['employeeWorkType'].valid">Employee Work Type Is Required</mat-error> 
+            </mat-form-field>
+
+                <mat-form-field appearance="outline" class="gender" [floatLabel]="floatLabelControl.value">
+                <mat-label>Employee Gender</mat-label>
+                <mat-select name="employeeGender" formControlName="employeeGender" required>
+                  <mat-option *ngFor="let Gender of Gender" [value]="Gender.value">
+                  {{Gender.viewValue}}
+                  </mat-option>
+                  </mat-select>
+                <mat-error *ngIf="!datasform.controls['employeeGender'].valid">Employee Gender Is Required</mat-error> 
+               </mat-form-field>
+            </p>
+    
+        <p>
+            <mat-form-field appearance="outline" class="group" [floatLabel]="floatLabelControl.value">
+            <mat-label>Employee BloodGroup</mat-label>
+            <mat-select name="employeeBloodGroup" formControlName="employeeBloodGroup" required>
+              <mat-option *ngFor="let BloodGroup of BloodGroup" [value]="BloodGroup.value">
+              {{BloodGroup.viewValue}}
+              </mat-option>
+              </mat-select>
+            <mat-error *ngIf="!datasform.controls['employeeBloodGroup'].valid">Employee Blood Group Is Required</mat-error> 
+           </mat-form-field>
+
+            <mat-form-field appearance="outline" class="add" [floatLabel]="floatLabelControl.value">
+            <mat-label>Employee Address</mat-label>
+            <input matInput type="text" name="employeeAddress" formControlName="employeeAddress" placeholder="please Enter Employee Adderss"required/>
+            <mat-error *ngIf="!datasform.controls['employeeAddress'].valid">Employee Address Is Required</mat-error> 
+           </mat-form-field>
+    
+            <mat-form-field appearance="outline" class="photo" [floatLabel]="floatLabelControl.value">
+            <mat-label>Employee photo</mat-label>
+            <input matInput type="text" name="employeePhoto"  formControlName="employeePhoto" placeholder="please Enter Employee photo"required/>
+            <mat-error *ngIf="!datasform.controls['employeePhoto'].valid">Employee Photo Is Required</mat-error> 
+           </mat-form-field>
+           </p>
+
+
+      <mat-card-header>
+    
+        <mat-card-title class="header-2" >EMPLOYEE INFORMATION</mat-card-title>
+      </mat-card-header>
+
+  
+    <p>
+        <mat-form-field appearance="outline" class="type" [floatLabel]="floatLabelControl.value">
+            <mat-label>Employee Type</mat-label>
+            <input matInput type="text" name="employeeType"  formControlName="employeeType" placeholder="please Enter Employee Type"required/>
+            <mat-error *ngIf="!datasform.controls['employeeType'].valid">Employee Type Is Required</mat-error>
+          </mat-form-field>
+   
+            <mat-form-field appearance="outline" class="branch" [floatLabel]="floatLabelControl.value">
+                <mat-label>Employee Office Branch</mat-label>
+                <input matInput type="text" name="employeeOfficeBranch" formControlName="employeeOfficeBranch" placeholder="please Enter Employee Office Branch"required/>
+                <mat-error *ngIf="!datasform.controls['employeeOfficeBranch'].valid">Employee Office Branch Is Required</mat-error>
+              </mat-form-field>
+            
+                <mat-form-field appearance="outline" class="grade" [floatLabel]="floatLabelControl.value">
+                    <mat-label>Employee Grade</mat-label>
+                    <input matInput type="text" name="employeeGrade"  formControlName="employeeGrade" placeholder="please Enter Employee Grade"required/>
+                    <mat-error *ngIf="!datasform.controls['employeeGrade'].valid">Employee Grade Is Required</mat-error>
+                  </mat-form-field>
+
+                <mat-form-field appearance="outline" class="insurance" [floatLabel]="floatLabelControl.value">
+                   <mat-label>Employee Insurance</mat-label>
+                  <input matInput type="text" name="employeeInsurance" formControlName="employeeInsurance" placeholder="please Enter Employee Insurance"required/>
+                  <mat-error *ngIf="!datasform.controls['employeeInsurance'].valid">Employee Insurance Is Required</mat-error>  
+                </mat-form-field>
+              </p>
+                    
+              <p>
+                 <mat-form-field appearance="outline" class="employee" [floatLabel]="floatLabelControl.value">
+                 <mat-label>Employee PF A/C NO</mat-label>
+                 <input matInput type="text" name="employeePFNo"  formControlName="employeePFNo" placeholder="please Enter Employee PF A/C NO"required/>
+                 <mat-error *ngIf="!datasform.controls['employeePFNo'].valid">Employee PF A/C NO Is Required</mat-error> 
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="ESI" [floatLabel]="floatLabelControl.value">
+                <mat-label>Employee ESI NO</mat-label>
+                <input matInput type="text" name="employeeESINo" formControlName="employeeESINo" placeholder="please Enter Employee ESI NO"required/>
+                <mat-error *ngIf="!datasform.controls['employeeESINo'].valid">Employee ESI No Is Required</mat-error> 
+              </mat-form-field>
+
+                <mat-form-field appearance="outline" class="leaving" [floatLabel]="floatLabelControl.value">
+                <mat-label>Employee Leaving Date</mat-label>
+                <input matInput type="date" name="employeeLeavingDate" formControlName="employeeLeavingDate" placeholder="please Enter Employee Leaving Date"required/>
+                <mat-error *ngIf="!datasform.controls['employeeLeavingDate'].valid">Employee Leaving Date Is Required</mat-error> 
+              </mat-form-field>
+            </p>
+    
+
+
+              <mat-card-header>
+            
+                <mat-card-title class="header-3">EMPLOYEE BANKING INFORMATION</mat-card-title>
+              </mat-card-header>
+          
+
+          
+                <p>
+                    <mat-form-field appearance="outline" class="bank" [floatLabel]="floatLabelControl.value">
+                        <mat-label>Employee Bank Account No</mat-label>
+                        <input matInput type="text" name="employeeBankAccountNo" formControlName="employeeBankAccountNo" placeholder="please Enter Employee Bank Account No"required/>
+                        <mat-error *ngIf="!datasform.controls['employeeBankAccountNo'].valid">Employee Bank A/C No Is Required</mat-error>
+                      </mat-form-field>
+                        
+                        <mat-form-field appearance="outline" class="bankName" [floatLabel]="floatLabelControl.value">
+                            <mat-label>Employee Bank Name</mat-label>
+                            <input matInput type="text" name="employeeBankName"  formControlName="employeeBankName" placeholder="please Enter Employee Bank Name"required/>
+                            <mat-error *ngIf="!datasform.controls['employeeBankName'].valid">Employee Bank Name Is Required</mat-error>
+                          </mat-form-field>
+                        
+                            <mat-form-field appearance="outline" class="accountName" [floatLabel]="floatLabelControl.value">
+                                <mat-label>Employee Account Name</mat-label>
+                                <input matInput type="text" name="employeeAccountName"  formControlName="employeeAccountName" placeholder="please Enter Employee Account Name"required/>
+                                <mat-error *ngIf="!datasform.controls['employeeAccountName'].valid">Employee Account Name Is Required</mat-error>
+                              </mat-form-field>
+
+                            <mat-form-field appearance="outline" class="ifsc" [floatLabel]="floatLabelControl.value">
+                               <mat-label>Employee IFSC Code</mat-label>
+                              <input matInput type="text" name="employeeIfscCode"  formControlName="employeeIfscCode" placeholder="please Enter Employee IFSC Code"required/>
+                              <mat-error *ngIf="!datasform.controls['employeeIfscCode'].valid">Employee IFSC Code Is Required</mat-error>
+                              </mat-form-field>
+                          </p>
+                                
+                          <p>
+                             <mat-form-field appearance="outline" class="payment"  [floatLabel]="floatLabelControl.value">
+                             <mat-label>Employee Payment Type</mat-label>
+                             <input matInput type="text" name="employeePaymentType" formControlName="employeePaymentType" placeholder="please Enter Employee Payment Type"required/>
+                             <mat-error *ngIf="!datasform.controls['employeePaymentType'].valid">Employee Payment Type Is Required</mat-error>
+                            </mat-form-field>
+                         
+                            <mat-form-field appearance="outline"  class="pan" [floatLabel]="floatLabelControl.value">
+                            <mat-label>Employee PAN NO</mat-label>
+                            <input matInput type="text" name="employeePANNo" formControlName="employeePANNo" placeholder="please Enter Employee PAN NO"required/>
+                            <mat-error *ngIf="!datasform.controls['employeePANNo'].valid">Employee PAN NO Is Required</mat-error>
+                           </mat-form-field>
+                        </p>
+                          
+
+
+                          <mat-card-header>
+                        
+                            <mat-card-title class="Header">EMMERGENCY CONTACT INFORMATION</mat-card-title>
+                          </mat-card-header>
+
+
+                      
+                            <p>
+                                <mat-form-field appearance="outline" class="contactName" [floatLabel]="floatLabelControl.value">
+                                    <mat-label>Emmergency Contact Name</mat-label>
+                                    <input matInput type="text" name="emmergencyContactName"  formControlName="emmergencyContactName" placeholder="please Enter Emmergency Contact Name" required/>
+                                    <mat-error *ngIf="!datasform.controls['emmergencyContactName'].valid">Contact Name Is Required</mat-error>
+                                  </mat-form-field>
+                                    
+                                    <mat-form-field appearance="outline"  class="contactNo" [floatLabel]="floatLabelControl.value">
+                                        <mat-label>Emmergency Contact NO</mat-label>
+                                        <input matInput type="text" name="emmergencyContactNo" formControlName="emmergencyContactNo" placeholder="please Enter Emmergency Contact NO"required/>
+                                        <mat-error *ngIf="!datasform.controls['emmergencyContactNo'].valid">Contact Number Is Required</mat-error>
+                                      </mat-form-field>
+
+                                        <mat-form-field appearance="outline" class="contactMail" [floatLabel]="floatLabelControl.value">
+                                            <mat-label>Emmergency Contact Email</mat-label>
+                                            <input matInput type="email" name="emmergencyContactEmail" formControlName="emmergencyContactEmail" placeholder="please Enter Emmergency Contact Email"required/>
+                                            <mat-error *ngIf="!datasform.controls['emmergencyContactEmail'].valid">Contact Email Is Required</mat-error>
+                                          </mat-form-field>
+
+                                        <mat-form-field appearance="outline" class="contactAddress" [floatLabel]="floatLabelControl.value">
+                                           <mat-label>Emmergency Contact Address</mat-label>
+                                          <input matInput type="text" name="emmergencyContactAddress"  formControlName="emmergencyContactAddress" placeholder="please Enter Emmergency Contact Adderss"required/>
+                                          <mat-error *ngIf="!datasform.controls['emmergencyContactAddress'].valid">Contact Address Is Required</mat-error>  
+                                        </mat-form-field>
+                                      </p>
+                            
+                                          <button class="sub" type="submit" mat-raised-button color="primary"  [disabled]=" !datasform.valid ">Submit</button>
+                                         
+                                          <div><button class="detail" mat-raised-button ><a href="#" style="color: darkblue;" routerLink="/details">Employee Details</a></button></div>
+
+                                   </form>
+                                    </mat-card>
+    

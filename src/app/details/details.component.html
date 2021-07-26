@@ -1,0 +1,63 @@
+<div class="head"><h1>EMPLOYEE DETAILS</h1></div>
+
+<button class="create" type="button" mat-raised-button color="primary"><a style="color: white;" routerLink="/employee"> + Create Employee</a></button>
+
+<div>
+
+  <mat-form-field class="filter" appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Filter" #input>
+  </mat-form-field>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+    <ng-container matColumnDef="employeeId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+      <td mat-cell *matCellDef="let row"> {{row.employeeId}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="employeeName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> NAME </th>
+      <td mat-cell *matCellDef="let row"> {{row.employeeName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="employeeMobileNo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> MOBILE </th>
+      <td mat-cell *matCellDef="let row"> {{row.employeeMobileNo}} </td>
+    </ng-container>
+ 
+    <ng-container matColumnDef="employeeEmail">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> EMAIL </th>
+      <td mat-cell *matCellDef="let row"> {{row.employeeEmail}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="view">
+      <th mat-header-cell *matHeaderCellDef> VIEW </th>
+      <td mat-cell *matCellDef="let row"> <button mat-raised-button color ="primary" type="button" (click)="onrowview(row.Id)">View</button> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef> EDIT </th>
+      <td mat-cell *matCellDef="let row"> <button mat-raised-button color ="primary" type="button" (click)="onrowedit(row.Id)">Edit</button></td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> DELETE </th>
+      <td mat-cell *matCellDef="let row"> <button mat-raised-button color ="warn" type="button" (click)="onrowdelete(row.Id)">Delete</button> </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter</td>
+    </tr>
+
+  </table>
+  <mat-paginator class="page" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+<button class="back" type="button" mat-raised-button color="primary"><a href="#" style="color:white;" routerLink="/login">Back to login</a></button>
+
+</div>
+  
+  

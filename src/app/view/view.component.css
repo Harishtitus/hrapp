@@ -1,0 +1,228 @@
+
+.card{
+    width: 1500px;
+    height: 1300px;
+    left: 80px;
+    background-color: rgb(226, 226, 226);
+}
+
+.header{
+    padding-left:  540px;;
+font-size: 40px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+background-color: rgb(0, 0, 0);
+width: 930px;
+color: white;
+}
+
+.Header{
+    padding-left:  360px;;
+font-size: 40px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+background-color: rgb(0, 0, 0);
+width: 1110px;
+color: white;
+}
+
+
+.header-2{
+    padding-left:  480px;;
+font-size: 40px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+background-color: rgb(0, 0, 0);
+width: 990px;
+color: white;
+}
+
+.header-3{
+    padding-left:  380px;;
+font-size: 40px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+background-color: rgb(0, 0, 0);
+width: 1090px;
+color: white;
+}
+
+.id{
+    width: 300px;
+    padding-left: 60px;
+
+}
+
+.name{
+    width: 300px;
+    padding-left: 60px;
+    
+}
+
+.company{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.department{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.designation{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.mail{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.mobile{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.date{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.to{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.DOB{
+    width: 300px;
+    padding-left: 60px;
+}
+
+
+.work{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.gender{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.group{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.add{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.photo{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.type{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.branch{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.grade{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.insurance{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.employee{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.ESI{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.leaving{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.bank{
+    width: 300px;
+    padding-left: 60px;
+}
+
+.bankName{
+    width: 300px;
+    padding-left: 60px; 
+}
+
+.accountName{
+    width: 300px;
+    padding-left: 60px; 
+}
+
+.ifsc{
+    width: 300px;
+    padding-left: 60px; 
+}
+
+.payment{
+    width: 300px;
+    padding-left: 60px; 
+}
+
+.pan{
+    width: 300px;
+    padding-left: 60px; 
+}
+
+.bankName{
+    width: 300px;
+    padding-left: 60px; 
+}
+
+.contactName{
+    width: 300px;
+    padding-left: 60px; 
+}
+
+.contactNo{
+    width: 300px;
+    padding-left: 60px; 
+}
+
+.contactMail{
+    width: 300px;
+    padding-left: 60px; 
+}
+
+.contactAddress{
+    width: 300px;
+    padding-left: 60px; 
+}
+
+.sub{
+    width: 250px;
+    left: 450px;
+}
+
+.detail{
+    width: 250px;
+    left: 650px;
+}
+
+.detail:hover{
+    color: white;
+}
+
+

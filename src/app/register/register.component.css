@@ -1,0 +1,62 @@
+.mat-card{
+    height: 600px;
+    max-width: 700px;
+    border-radius: 30px;
+    left: 500px;
+    background-color: rgb(226, 226, 226);
+    top: 100px;
+}
+
+.username{
+    top: 50px;
+    width: 300px;
+    left: 200px;
+}
+
+.number{
+    top: 50px;
+    width: 300px;
+    left: 200px; 
+}
+
+.mail{
+    top: 50px;
+    width: 300px;
+    left: 200px;
+}
+
+.password{
+    top: 50px;
+    width: 300px;
+    left: 200px;
+}
+
+.button{
+    top: 40px;
+    width: 300px;
+    left: 100px;
+}
+
+.full-width{
+    top: 50px;
+    width: 300px;
+    left: 200px;
+    background-color: rgb(231, 231, 231);
+}
+
+.button-row:hover{
+    color: darkblue;
+}
+
+.button-row{
+    top: 50px;
+   left: 200px;
+   width: 300px;
+}
+
+.header{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
